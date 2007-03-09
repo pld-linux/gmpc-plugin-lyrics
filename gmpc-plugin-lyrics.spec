@@ -20,15 +20,15 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This plugin fetches lyrics from the internet. It uses the following websites as
-sources:
+This plugin fetches lyrics from the internet. It uses the following
+websites as sources:
 - LyricWiki
 - LeosLyrics
 - Lyrics Tracker
 
-
 %description -l pl.UTF-8
-Ta wtyczka pobiera słowa piosenek z następujęcych serwisów internetowych:
+Ta wtyczka pobiera słowa piosenek z następujęcych serwisów
+internetowych:
 - LyricWiki
 - LeosLyrics
 - Lyrics Tracker
