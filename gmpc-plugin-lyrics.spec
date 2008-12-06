@@ -2,14 +2,12 @@
 Summary:	Lyrics provider plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka udostępniająca słowa piosenek dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-lyrics-provider
-Version:	0.15.0
+Version:	0.16.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-# http://sarine.nl/gmpc-plugins-downloads
-Source0:	%{source_name}-%{version}.tar.gz
-# Source0-md5:	48edc2b8a22a89955dd1847afea30ce0
-Patch0:		%{name}-plugins_path.patch
+Source0:	http://download.sarine.nl/Programs/gmpc/0.16.0/gmpc-lyrics-%{version}.tar.gz
+# Source0-md5:	7bb9c502771cffc0171620f46942bba9
 URL:		http://gmpc.sarine.nl/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -35,7 +33,6 @@ internetowych:
 
 %prep
 %setup -qn %{source_name}-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -49,16 +46,15 @@ internetowych:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/gmpc
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm $RPM_BUILD_ROOT%{_libdir}/gmpc/*.la
+rm $RPM_BUILD_ROOT%{_libdir}/gmpc/plugins/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gmpc/*.so
+%attr(755,root,root) %{_libdir}/gmpc/plugins/*.so
