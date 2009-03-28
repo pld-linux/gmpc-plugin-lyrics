@@ -6,8 +6,8 @@ Version:	0.18.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
-Source0:	http://download.sarine.nl/Programs/gmpc/0.17.0/gmpc-lyrics-%{version}.tar.gz
-# Source0-md5:	f93bfcccd812207f207072b0f7aa8503
+Source0:	http://dl.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
+# Source0-md5:	621d2a5f0d3e8dd574569304a22608e7
 URL:		http://gmpcwiki.sarine.nl/index.php?title=Lyrics
 BuildRequires:	autoconf >= 2.58
 BuildRequires:	automake
@@ -18,7 +18,7 @@ BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel
-Requires:	gmpc >= 0.17.0
+Requires:	gmpc >= 0.18.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
