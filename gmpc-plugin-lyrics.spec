@@ -2,24 +2,27 @@
 Summary:	Lyrics provider plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka udostępniająca słowa piosenek dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-lyrics-provider
-Version:	0.18.100
+Version:	0.19.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
 #Source0:	http://dl.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
-Source0:	http://download.sarine.nl/Programs/gmpc/0.19.0-rc1/%{source_name}-%{version}.tar.gz
-# Source0-md5:	cbe0a6d8dbfa6aba92064ddd13791633
+Source0:	http://download.sarine.nl/Programs/gmpc/0.19.0/%{source_name}-%{version}.tar.gz
+# Source0-md5:	edc96c023774004f3ffb760592a9a48d
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_LYRICS
 BuildRequires:	autoconf >= 2.58
 BuildRequires:	automake
-BuildRequires:	curl-devel
+#BuildRequires:	curl-devel
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.10.0
 BuildRequires:	gmpc-devel >= 0.18.100
 BuildRequires:	gtk+2-devel >= 2:2.8.0
+BuildRequires:	intltool
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel
-Requires:	gmpc >= 0.18.0
+BuildRequires:	pkgconfig
+Requires:	gmpc >= 0.19.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
